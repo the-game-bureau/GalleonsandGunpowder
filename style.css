@@ -1,0 +1,64 @@
+/* Import the Pieces of Eight font */
+@font-face {
+  font-family: 'Pieces of Eight';
+  src: url('Pieces_of_Eight.ttf') format('truetype');
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Pieces of Eight', Arial, sans-serif; /* Apply font to title */
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+th, td {
+  border: 1px dashed #000;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+#grid th:first-child, #grid th, #grid td:first-child {
+  font-family: 'Pieces of Eight', Arial, sans-serif; /* Apply font to row headers, numbers, and column headers */
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* Hide print button during printing */
+@media print {
+  #print-button {
+    display: none;
+  }
+}

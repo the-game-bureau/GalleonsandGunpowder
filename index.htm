@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleons and Gunpowder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏴‍☠️ Galleons and Gunpowder Grid 🏴‍☠️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Galleons and Gunpowder</h1>
-    </header>
-    <nav>
-        <a href="#rules">Rules</a>
-        <a href="https://www.thegamebureau.com/contact">Contact</a>
-    </nav>
-    <main>
-        <section id="rules">
-            <h2>Rules</h2>
-            <p>Explore the comprehensive rules for Galleons and Gunpowder to master the game.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Have questions or feedback? Reach out to us through our contact page.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Galleons and Gunpowder. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1 id="page-title">🏴‍☠️ Galleons and Gunpowder Grid 🏴‍☠️</h1>
+  </header>
+  <main>
+    <table id="grid">
+      <thead>
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>A</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>B</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>C</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>D</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>E</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>F</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>G</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>H</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>I</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>J</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+      </tbody>
+    </table>
+    <button id="print-button" onclick="printPage()">Print Grid</button>
+  </main>
+  <script>
+    function printPage() {
+      window.print();
+    }
+  </script>
 </body>
 </html>
