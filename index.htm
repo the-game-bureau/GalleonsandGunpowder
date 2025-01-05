@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🏴‍☠️ Galleons and Gunpowder Grid 🏴‍☠️</title>
+  <title>🏴‍☠️ Galleons and Gunpowder 🏴‍☠️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Print Button -->
+  <button id="print-button" onclick="window.print()">Print Page</button>
   <header>
-    <h1 id="page-title">🏴‍☠️ Galleons and Gunpowder Grid 🏴‍☠️</h1>
+    <h1 id="page-title">🏴‍☠️ Galleons and Gunpowder 🏴‍☠️</h1>
   </header>
-  <main>
+  
+  <!-- Main section -->
+  <main class="table-container" id="main-grid">
+    <!-- High Seas Table -->
     <table id="grid">
       <caption>The High Seas</caption>
       <thead>
@@ -41,12 +46,65 @@
         <tr><th>J</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
       </tbody>
     </table>
-    <button id="print-button" onclick="printPage()">Print Grid</button>
+
+    <!-- Boats Table -->
+    <table id="boats">
+      <caption>Yer Armada</caption>
+      <tbody>
+        <tr><td><img src="galleon.png" alt="Galleon"></td></tr>
+        <tr><td><img src="brigantine.png" alt="Brigantine"></td></tr>
+        <tr><td><img src="frigate.png" alt="Frigate"></td></tr>
+        <tr><td><img src="sloop.png" alt="Sloop"></td></tr>
+        <tr><td><img src="cutter.png" alt="Cutter"></td></tr>
+      </tbody>
+    </table>
   </main>
-  <script>
-    function printPage() {
-      window.print();
-    }
-  </script>
+
+  <!-- Duplicate main section as enemygrid -->
+  <main class="table-container" id="enemy-grid">
+    <!-- Enemy Grid Table -->
+    <table id="grid">
+      <caption>Enemy Seas</caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>A</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>B</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>C</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>D</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>E</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>F</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>G</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>H</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>I</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+        <tr><th>J</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Enemy Fleet Table -->
+    <table id="boats">
+      <caption>Enemy Armada</caption>
+      <tbody>
+        <tr><td><img src="galleone.png" alt="Enemy Galleon"></td></tr>
+        <tr><td><img src="brigantinee.png" alt="Enemy Brigantine"></td></tr>
+        <tr><td><img src="frigatee.png" alt="Enemy Frigate"></td></tr>
+        <tr><td><img src="sloope.png" alt="Enemy Sloop"></td></tr>
+        <tr><td><img src="cuttere.png" alt="Enemy Cutter"></td></tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
