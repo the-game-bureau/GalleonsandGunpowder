@@ -14,9 +14,9 @@
   </header>
   
   <!-- Main section -->
-  <main class="table-container" id="main-grid">
+  <main class="table-container vertical">
     <!-- High Seas Table -->
-    <table id="grid">
+    <table id="grid" class="full-width">
       <caption>The High Seas</caption>
       <thead>
         <tr>
@@ -47,21 +47,39 @@
       </tbody>
     </table>
 
-    <!-- Boats Table -->
-    <table id="boats">
-      <caption>Yer Armada</caption>
-      <tbody>
-        <tr><td><img src="galleon.png" alt="Galleon"></td></tr>
-        <tr><td><img src="brigantine.png" alt="Brigantine"></td></tr>
-        <tr><td><img src="frigate.png" alt="Frigate"></td></tr>
-        <tr><td><img src="sloop.png" alt="Sloop"></td></tr>
-        <tr><td><img src="cutter.png" alt="Cutter"></td></tr>
-      </tbody>
-    </table>
-  </main>
+    <!-- Armada Table -->
+    <table id="armada">
+      <caption>Enemy Armada</caption>
 
-  <!-- Duplicate main section as enemygrid -->
-  <main class="table-container" id="enemy-grid">
+      <tr>
+        <td colspan="5" class="ship-name">Galleon</td>
+        <td colspan="4" class="ship-name">Brigantine</td>
+        <td colspan="3" class="ship-name">Frigate</td>
+        <td colspan="3" class="ship-name">Sloop</td>
+        <td colspan="2" class="ship-name">Cutter</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+    </table>    
+
     <!-- Enemy Grid Table -->
     <table id="grid">
       <caption>Enemy Seas</caption>
@@ -91,18 +109,6 @@
         <tr><th>H</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
         <tr><th>I</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
         <tr><th>J</th><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td><td>◦</td></tr>
-      </tbody>
-    </table>
-
-    <!-- Enemy Fleet Table -->
-    <table id="boats">
-      <caption>Enemy Armada</caption>
-      <tbody>
-        <tr><td><img src="galleone.png" alt="Enemy Galleon"></td></tr>
-        <tr><td><img src="brigantinee.png" alt="Enemy Brigantine"></td></tr>
-        <tr><td><img src="frigatee.png" alt="Enemy Frigate"></td></tr>
-        <tr><td><img src="sloope.png" alt="Enemy Sloop"></td></tr>
-        <tr><td><img src="cuttere.png" alt="Enemy Cutter"></td></tr>
       </tbody>
     </table>
   </main>
