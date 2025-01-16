@@ -48,14 +48,78 @@
         <section class="section">
             <h2>The Armada</h2>
             <p>Each captain commands an Armada of five ships:</p>
-            <ul>
-                <li><strong>Galleon</strong> (5 squares): The mightiest ship.</li>
-                <li><strong>Brigantine</strong> (4 squares): A sturdy and swift vessel.</li>
-                <li><strong>Frigate</strong> (3 squares): A versatile warship.</li>
-                <li><strong>Sloop</strong> (3 squares): Quick and reliable.</li>
-                <li><strong>Cutter</strong> (2 squares): The nimblest ship.</li>
+            <strong>Galleon</strong> (5 squares): The mightiest ship.
+            <strong>Brigantine</strong> (4 squares): A sturdy and swift vessel.
+            <strong>Frigate</strong> (3 squares): A versatile warship.
+            <strong>Sloop</strong> (3 squares): Quick and reliable.
+            <strong>Cutter</strong> (2 squares): The nimblest ship.
             </ul>
-        </section>
+            </section>
+
+            <section>
+                <style>
+                    table {
+                        width: auto; /* Table width adjusts to content */
+                        border: 3px solid #000; /* Outer border for the table */
+                        border-collapse: collapse; /* Ensures clean borders */
+                        font-size: 16px; /* Larger font size */
+                    }
+                    td {
+                        border: 1px solid #000; /* Inner borders for the table cells */
+                        padding: 8px; /* Add padding for readability */
+                        text-align: center; /* Center-align the text in the cells */
+                        width: 50px; /* Makes the first 5 cells square */
+                        height: 50px;
+                    }
+                    td:empty,
+                    td:not(:empty):not(:has(*)):has(:only-child:empty) {
+                        border: none; /* Remove border from empty or blank cells */
+                    }
+                </style>
+                <table>
+                    <tr>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>Galleon</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>Brigantine</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>Frigate</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>Sloop</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>◦</td>
+                        <td>◦</td>
+                        <td>Cutter</td>
+                    </tr>
+                </table>
+            </section>
+            
 
         <section class="section">
             <h2>Gameplay</h2>
