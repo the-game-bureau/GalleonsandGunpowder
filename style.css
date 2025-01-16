@@ -1,23 +1,30 @@
 /* Banner Styles */
 .banner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Align text within the content */
   padding: 20px;
   background-color: #f8f9fa; /* Light background color */
   border-bottom: 2px solid #ddd; /* Subtle border */
-  position: relative;
+  position: relative; /* Enables positioning for child elements */
 }
 
 .text-content {
-  text-align: center;
-  flex: 1;
+  margin: 0; /* Remove any default margin to ensure proper alignment */
 }
 
 .banner h1 {
   font-size: 2.5rem;
   margin: 10px 0;
   color: #333; /* Dark text */
+}
+
+.banner h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #222;
 }
 
 .banner .byline {
@@ -35,13 +42,12 @@
   text-decoration: underline;
 }
 
-.banner h2 {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #222;
-}
-
-.banner .button {
+/* Button Styling */
+.banner > .button {
+  position: absolute; /* Position the button relative to the banner */
+  right: 20px; /* Align it to the right of the banner */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Adjust for exact centering */
   padding: 10px 20px;
   background-color: #007bff; /* Primary button color */
   color: #fff;
@@ -54,12 +60,6 @@
 .banner .button:hover {
   background-color: #0056b3; /* Darker on hover */
 }
-
-/* Ensure button stays aligned to the right */
-.banner > .button {
-  margin-left: 20px; /* Add spacing between text and button */
-}
-
 
 /* Import the Pieces of Eight font from the style folder */
 @font-face {
