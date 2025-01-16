@@ -130,7 +130,7 @@ body {
 }
 
 .section ul li::before {
-  content: "🏴‍☠️"; /* Nautical icon for list items */
+  content: "🏴‍☠️\00A0"; /* Nautical icon with a non-breaking space after */
   position: absolute;
   left: 0;
   color: #0f4c75; /* Blue to match theme */
