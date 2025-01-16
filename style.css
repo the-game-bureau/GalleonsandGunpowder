@@ -5,35 +5,40 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px; /* Add more padding for better visibility */
-  background: url('style/main.png') center/cover no-repeat; /* Set the image as the background */
-  color: #ffffff; /* Ensure text is readable */
-  border-bottom: 4px solid #1b262c;
+  padding: 80px 20px;
+  background: linear-gradient(
+      rgba(10, 20, 60, 0.7), 
+      rgba(10, 20, 60, 0.7)
+    ), 
+    url('style/main.png') center/cover no-repeat;
+  color: #f9e7b8; /* Soft gold text color */
+  border-bottom: 4px solid #d69a00; /* Gold border */
   position: relative;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Add a dark overlay for readability */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
 }
 
 .text-content {
   margin: 0 auto;
   max-width: 900px;
-  z-index: 1; /* Ensure text is above the background */
+  z-index: 1;
 }
 
 .banner h1 {
   font-size: 4rem;
   margin: 10px 0;
   font-weight: bold;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Ensure text is visible over the image */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhance visibility over background */
+  color: #f9e7b8; /* Match text color to the golden accents */
 }
 
 .banner .byline {
   font-size: 1.2rem;
   margin: 10px 0;
-  color: #ffe400; /* Adjusted color for better visibility */
+  color: #d69a00; /* Gold color */
 }
 
 .banner .byline a {
-  color: #ffe400;
+  color: #d69a00; /* Gold for links */
   text-decoration: none;
 }
 
@@ -42,30 +47,24 @@
 }
 
 .banner > .button {
-  z-index: 1; /* Ensure the button is above the background */
-}
-
-
-/* Button Styling */
-.banner > .button {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px 30px;
-  background-color: #ffe400;
-  color: #0f4c75;
+  padding: 12px 30px;
+  background-color: #d69a00; /* Gold color */
+  color: #06203e; /* Dark blue for text */
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .banner .button:hover {
-  background-color: #ffd700;
-  transform: translateY(-50%) scale(1.05);
+  background-color: #a67600; /* Darker gold on hover */
+  transform: translateY(-50%) scale(1.1);
 }
 
 /* Font Import and Application */
@@ -80,7 +79,7 @@
 
 /* General Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
@@ -89,7 +88,7 @@ body {
 }
 
 h1.shadow-text {
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 /* Section Styling */
@@ -158,9 +157,95 @@ h1.shadow-text {
   color: #0f4c75;
 }
 
-/* Footer or Call-to-Action */
-.section:last-child {
+#grid tr:nth-child(odd), #armada tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+#grid tr:hover, #armada tr:hover {
+  background-color: #e8f0ff;
+  cursor: pointer;
+}
+
+/* Footer Styling */
+.footer {
   text-align: center;
-  background: #0f4c75;
+  padding: 20px;
+  background-color: #0f4c75;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer a {
+  color: #d69a00; /* Gold color */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d69a00; /* Gold color */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #d69a00; /* Gold color */
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #d69a00; /* Gold color */
+}
+
+.social-icons a:hover {
   color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
 }
