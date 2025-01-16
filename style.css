@@ -1,40 +1,61 @@
-/* Banner Styles */
+/* General Styles */
+/* Universal and body-level styling for overall page layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333; /* Standard text color */
+  background-color: #f8f9fa; /* Light background for readability */
+  line-height: 1.6;
+}
+
+/* Font Import and Custom Application */
+/* Custom pirate-themed font for headers and special text */
+@font-face {
+  font-family: 'Pieces of Eight';
+  src: url('style/Pieces_of_Eight.ttf') format('truetype');
+}
+
+.pieces-font {
+  font-family: 'Pieces of Eight', Arial, sans-serif; /* Fallback to Arial */
+}
+
+/* Banner Section */
+/* Styling for the banner, including title, byline, and call-to-action buttons */
 .banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 20px 20px; /* Tighter vertical padding */
   background: linear-gradient(
-      rgba(10, 20, 60, 0.7), 
+      rgba(10, 20, 60, 0.7),
       rgba(10, 20, 60, 0.7)
-    ), 
+    ),
     url('style/main.png') center/cover no-repeat;
   color: #f9e7b8; /* Soft gold text color */
   border-bottom: 4px solid #d69a00; /* Gold border */
-  position: relative;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-}
-
-.text-content {
-  margin: 0 auto;
-  max-width: 900px;
-  z-index: 1;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Adds depth */
 }
 
 .banner h1 {
   font-size: 4rem;
-  margin: 10px 0;
   font-weight: bold;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhance visibility over background */
-  color: #f9e7b8; /* Match text color to the golden accents */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for professionalism */
+  color: #d69a00; /* Gold text color */
+  margin-bottom: 5px; /* Slight gap below the title */
 }
 
 .banner .byline {
   font-size: 1.2rem;
-  margin: 10px 0;
-  color: #d69a00; /* Gold color */
+  color: #d69a00; /* Gold text color */
+  margin: 5px 0 10px 0; /* Consistent spacing above and below */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Softer shadow for lighter text */
 }
 
 .banner .byline a {
@@ -46,137 +67,87 @@
   text-decoration: underline;
 }
 
-.banner > .button {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 12px 30px;
-  background-color: #d69a00; /* Gold color */
-  color: #06203e; /* Dark blue for text */
+/* Button Container */
+.button-container {
+  margin-top: 10px; /* Space above the buttons */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center-align buttons */
+}
+
+.button {
+  padding: 8px 18px; /* Slightly smaller buttons for a compact layout */
+  background-color: #d69a00; /* Gold button background */
+  color: #06203e; /* Dark blue text for contrast */
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.banner .button:hover {
+.button:hover {
   background-color: #a67600; /* Darker gold on hover */
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Font Import and Application */
-@font-face {
-  font-family: 'Pieces of Eight';
-  src: url('style/Pieces_of_Eight.ttf') format('truetype');
-}
-
-.pieces-font {
-  font-family: 'Pieces of Eight', Arial, sans-serif;
-}
-
-/* General Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
-  line-height: 1.6;
-}
-
-h1.shadow-text {
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-}
-
-/* Section Styling */
+/* Section Content */
+/* Styling for main content sections */
 .section {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background: #ffffff;
+  background: #ffffff; /* White background for contrast */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .section h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #0f4c75;
+  color: #0f4c75; /* Blue for headers */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for titles */
+  font-weight: bold;
 }
 
 .section p {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #555;
+  color: #555; /* Slightly muted text for paragraphs */
 }
 
 .section ul {
-  list-style: none;
+  list-style: none; /* Remove default bullet styling */
   padding: 0;
 }
 
 .section ul li {
   font-size: 1.1rem;
   margin: 5px 0;
-  padding-left: 20px;
+  padding-left: 20px; /* Space for icons */
   position: relative;
 }
 
 .section ul li::before {
-  content: "⚓";
+  content: "🏴‍☠️"; /* Nautical icon for list items */
   position: absolute;
   left: 0;
-  color: #0f4c75;
+  color: #0f4c75; /* Blue to match theme */
 }
 
-/* Table Styling */
-.table-container.vertical {
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-#grid, #armada {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-#grid th, #grid td, #armada th, #armada td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-#grid caption, #armada caption {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #0f4c75;
-}
-
-#grid tr:nth-child(odd), #armada tr:nth-child(odd) {
-  background-color: #f4f4f4;
-}
-
-#grid tr:hover, #armada tr:hover {
-  background-color: #e8f0ff;
-  cursor: pointer;
-}
-
-/* Footer Styling */
+/* Footer Section */
+/* Footer and related content styles */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #0f4c75;
-  color: #fff;
+  background-color: #0f4c75; /* Dark blue background */
+  color: #fff; /* White text for contrast */
   font-size: 1.1rem;
 }
 
 .footer a {
-  color: #d69a00; /* Gold color */
+  color: #d69a00; /* Gold links */
   text-decoration: none;
 }
 
@@ -200,52 +171,72 @@ h1.shadow-text {
 .footer-section h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #d69a00; /* Gold color */
+  color: #d69a00; /* Gold for headers */
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
+/* Table Styling */
+/* Table styles for data presentation */
+.table-container.vertical {
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.footer-section ul li {
+#grid, #armada {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#grid th, #grid td, #armada th, #armada td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#grid caption, #armada caption {
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: #0f4c75; /* Blue headers */
 }
 
-.footer-section ul li a {
-  color: #d69a00; /* Gold color */
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #d69a00; /* Gold color */
-}
-
-.social-icons a:hover {
-  color: #ffffff;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-  font-size: 0.9rem;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
+/* Print Styles */
+/* Custom styles for printing */
+@media print {
+  * {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+    color: black; /* Ensure all text is black for readability */
   }
 
-  .footer-section {
-    text-align: center;
+  body {
+    font-size: 10pt;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .banner, .footer, .social-icons, .button {
+    display: none !important; /* Hide unnecessary elements */
+  }
+
+  .section {
+    margin: 0;
+    padding: 0;
+    page-break-inside: avoid; /* Prevent page breaks mid-section */
+  }
+
+  ul, ol {
+    padding-left: 20px;
+  }
+
+  h1, h2, h3, p, ul, ol, li {
+    margin: 0.5em 0; /* Minimal spacing */
+  }
+
+  @page {
+    size: 8.5in 11in; /* Letter size */
+    margin: 1cm; /* Standard print margin */
   }
 }
