@@ -37,7 +37,7 @@ body {
       rgba(10, 20, 60, 0.7),
       rgba(10, 20, 60, 0.7)
     ),
-    url('style/main.png') center/cover no-repeat;
+    url('main.png') center/cover no-repeat;
   color: #f9e7b8; /* Soft gold text color */
   border-bottom: 4px solid #d69a00; /* Gold border */
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Adds depth */
@@ -137,116 +137,101 @@ body {
 }
 
 /* Footer Section */
-/* Footer and related content styles */
 .footer {
   text-align: center;
   padding: 20px;
   background-color: #0f4c75; /* Dark blue background */
   color: #fff; /* White text for contrast */
   font-size: 1.1rem;
-}
-
-.footer a {
-  color: #d69a00; /* Gold links */
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+  border-top: 4px solid #d69a00; /* Gold line at the top */
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-section {
-  flex: 1 1 200px;
-  margin: 10px;
-}
-
-.footer-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #d69a00; /* Gold for headers */
-}
-
-/* Table Styling */
-/* Table styles for data presentation */
-.table-container.vertical {
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-#grid, #armada {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-#grid th, #grid td, #armada th, #armada td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-#grid caption, #armada caption {
-  font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 10px;
-  color: #0f4c75; /* Blue headers */
 }
 
-/* Print Styles */
-/* Custom styles for printing */
-@media print {
-  * {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    background: none;
-    color: black; /* Ensure all text is black for readability */
-  }
-
-  body {
-    font-size: 10pt;
-    line-height: 1.4;
-    margin: 0;
-  }
-
-  .banner, .footer, .social-icons, .button {
-    display: none !important; /* Hide unnecessary elements */
-  }
-
-  .section {
-    margin: 0;
-    padding: 0;
-    page-break-inside: avoid; /* Prevent page breaks mid-section */
-  }
-
-  ul, ol {
-    padding-left: 20px;
-  }
-
-  h1, h2, h3, p, ul, ol, li {
-    margin: 0.5em 0; /* Minimal spacing */
-  }
-
-  @page {
-    size: 8.5in 11in; /* Letter size */
-    margin: 1cm; /* Standard print margin */
-  }
-  table {
-    border-collapse: collapse;
-    width: auto;
-    font-size: 12px;
+.horizontal-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Adjust links to multiple lines on smaller screens */
+  margin: 10px 0;
 }
-td {
-    border: 1px solid #000;
-    padding: 5px;
-    text-align: center;
+
+.horizontal-links a {
+  color: #d69a00; /* Gold links */
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.horizontal-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+/* Popup Styling */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #0f4c75; /* Match existing theme colors */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.popup-button {
+  padding: 10px 20px;
+  background-color: #d69a00; /* Gold button background */
+  color: #06203e; /* Dark blue text */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-button:hover {
+  background-color: #a67600; /* Darker gold on hover */
+}
+
+.popup-close {
+  margin-top: 10px;
+  background-color: #f8f9fa;
+  color: #0f4c75;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.popup-close:hover {
+  background-color: #e0e0e0;
 }
