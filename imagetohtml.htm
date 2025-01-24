@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship Figure 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a8e6cf;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .figure-2 {
+      background-color: #54c6a9;
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .figure-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: left;
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+    }
+
+    .ship-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .ship-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .ship-icon {
+      display: inline-block;
+      height: 20px;
+      background-color: black;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .ship-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 2px;
+      width: 80%;
+      background-color: white;
+    }
+
+    .carrier {
+      width: 100px;
+    }
+
+    .battleship {
+      width: 80px;
+    }
+
+    .cruiser {
+      width: 60px;
+    }
+
+    .submarine {
+      width: 60px;
+    }
+
+    .destroyer {
+      width: 40px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="figure-2">
+    <div class="figure-title">FIGURE 2</div>
+    <ul class="ship-list">
+      <li class="ship-item">
+        <div class="ship-icon carrier"></div>
+        <span>CARRIER — 5 HOLES</span>
+      </li>
+      <li class="ship-item">
+        <div class="ship-icon battleship"></div>
+        <span>BATTLESHIP — 4 HOLES</span>
+      </li>
+      <li class="ship-item">
+        <div class="ship-icon cruiser"></div>
+        <span>CRUISER — 3 HOLES</span>
+      </li>
+      <li class="ship-item">
+        <div class="ship-icon submarine"></div>
+        <span>SUBMARINE — 3 HOLES</span>
+      </li>
+      <li class="ship-item">
+        <div class="ship-icon destroyer"></div>
+        <span>DESTROYER — 2 HOLES</span>
+      </li>
+    </ul>
+    <div class="footer">Your fleet of 5 ships.</div>
+  </div>
+</body>
+</html>

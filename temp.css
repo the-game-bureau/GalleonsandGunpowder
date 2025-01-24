@@ -1,5 +1,48 @@
+/* General styles for all ship tables */
+.ship-name {
+    font-weight: bold;
+    color: #333; /* Dark text for readability */
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #333; /* Border for the header row */
+    height: auto; /* Auto height for the first row */
+    padding: 10px; /* Optional padding for visual balance */
+}
+
+.background-row td {
+    font-size: 2rem; /* Larger font size for numbers */
+    color: white; /* White text for numbers */
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #333; /* Border around each cell */
+    width: 50px;
+    height: 50px; /* Fixed height for the second row */
+}
+
+/* Specific backgrounds for each ship's bottom row */
+#galleon .background-row {
+    background-image: url('ships/galleon.webp'); /* Background for Galleon */
+}
+
+#brigantine .background-row {
+    background-image: url('ships/brigantine.png'); /* Background for Brigantine */
+}
+
+#frigate .background-row {
+    background-image: url('ships/frigate.png'); /* Background for Frigate */
+}
+
+#cutter .background-row {
+    background-image: url('ships/cutter.png'); /* Background for Cutter */
+}
+
+#sloop .background-row {
+    background-image: url('ships/sloop.png'); /* Background for Sloop */
+}
+
+/* Shared background styling */
 .background-row {
-    background-image: url('ships/galleon.png'); /* Replace with the URL of your image */
     background-size: cover; /* Ensures the image covers the row */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
